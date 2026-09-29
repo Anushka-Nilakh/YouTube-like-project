@@ -1,12 +1,10 @@
 const express = require("express");
 require("dotenv").config();
 const DB_NAME=require("./constants.js")
+const app=require("./app.js")
 
 const connectDB = require("./db");
 
-const app = express();
-
-app.use(express.json());
 
 connectDB()
     .then(() => {
